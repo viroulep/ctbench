@@ -9,6 +9,17 @@ or single-size flame graphs.
 
 Also, `ctbench` was made with the intents of **integration** and **reuse**.
 
+## Dependencies
+
+In order to compile this project you need:
+  - A C++17 compiler
+  - Boost
+
+Some other dependencies will be installed as part of the configuration/building
+process, and you shouldn't have to worry about them:
+  - Sciplot
+  - NLohmann's Json library
+
 ## How-to
 
 Add the following to your `CMakeLists.txt` file:
