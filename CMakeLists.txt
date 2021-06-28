@@ -16,6 +16,9 @@ if(CTBENCH_ENABLE_TESTING)
   enable_testing()
 endif(CTBENCH_ENABLE_TESTING)
 
+set(JSON_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third-party/nlohmann-3.9.1)
+include(cmake/sciplot.cmake)
+
 add_subdirectory(time-trace-wrapper)
 
 # Exporting time-trace-wrapper exec path
