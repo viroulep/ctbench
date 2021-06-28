@@ -1,6 +1,15 @@
 cmake_minimum_required(VERSION 3.18)
 project(ctbench)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# This is needed for compilers relying on libstdc++ (eg: gcc, or clang using
+# the libstdc++ installed with gcc).
+# FIXME: there is probably a version for which is work; it may be worth to
+# try to detect if the compiler needs that flag!
+link_libraries(stdc++fs)
+
 option(CTBENCH_ENABLE_TESTING "Enable testing for ctbench components." 0)
 
 if(CTBENCH_ENABLE_TESTING)
